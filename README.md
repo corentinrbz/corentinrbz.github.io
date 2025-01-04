@@ -6,7 +6,7 @@ Ce projet est un site internet personnel comprenant les sections suivantes :
 - Un portfolio
 - Un formulaire de contact
 
-Il a été conçu dans le cadre d'un TP noté pour apprendre à versionner avec Git, déployer un site sur GitHub Pages, et appliquer des techniques avancées comme la réécriture d'URLs et la gestion des erreurs.
+J'ai conçu ce site dans le cadre d'un TP pour apprendre à versionner avec Git, déployer un site sur GitHub Pages et appliquer des techniques avancées telles que la réécriture d'URL ou encore la gestion des erreurs (pour Apache).
 
 ## Fonctionnalités principales
 
@@ -17,7 +17,7 @@ Il a été conçu dans le cadre d'un TP noté pour apprendre à versionner avec 
 
 ## Prérequis
 
-Pour visualiser ou modifier ce projet en local, vous aurez besoin de :
+Pour visualiser ou modifier ce projet en local, il faut :
 - Un éditeur de code (par exemple VS Code)
 - Un navigateur web
 
@@ -25,7 +25,7 @@ Pour visualiser ou modifier ce projet en local, vous aurez besoin de :
 
 1. Cloner le dépôt avec la commande :
   `git clone https://github.com/corentinrbz/corentinrbz.github.io.git`
-2. Ouvrir le fichier index.html dans votre navigateur pour explorer le site.
+2. Ouvrir le fichier index.html dans le navigateur pour explorer le site.
 
 ## Lien vers le site : corentinrbz.github.io
 
