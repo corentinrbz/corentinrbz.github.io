@@ -1,0 +1,2 @@
+DirectoryIndex toto.php index2.html tata.html http://10.56.8.63/archi/erreurs/404.html
+ErrorDocument 404 http://10.56.8.63/archi/erreurs/404.html
