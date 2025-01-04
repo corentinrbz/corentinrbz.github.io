@@ -27,5 +27,7 @@ Pour visualiser ou modifier ce projet en local, vous aurez besoin de :
   `git clone https://github.com/corentinrbz/corentinrbz.github.io.git`
 2. Ouvrir le fichier index.html dans votre navigateur pour explorer le site.
 
+## Lien vers le site : corentinrbz.github.io
+
 
 
