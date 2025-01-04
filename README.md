@@ -1,4 +1,4 @@
-# Projet CV - Portfolio
+# Petit projet : site internet personnel (CV & portfolio)
 
 Ce projet est un site internet personnel comprenant les sections suivantes :
 - Une page d'accueil
@@ -10,10 +10,10 @@ Il a été conçu dans le cadre d'un TP noté pour apprendre à versionner avec 
 
 ## Fonctionnalités principales
 
-1. **Réécriture d'URLs sans extensions** : Les pages sont accessibles via des chemins simplifiés
-2. **Formulaire de contact fonctionnel** : Une interface pour envoyer des messages
-3. **Portfolio interactif** : Présentation de projets avec des vignettes cliquables
-4. **Page d'erreur personnalisée (404)** : Une page dédiée pour les liens cassés ou introuvables
+1. **Réécriture d'URLs sans extensions** : les pages sont accessibles via des chemins simplifiés
+2. **Formulaire de contact fonctionnel** : une interface pour envoyer des messages
+3. **Portfolio interactif** : présentation de projets avec des vignettes cliquables
+4. **Page d'erreur personnalisée (404)** : une page dédiée pour les liens cassés ou introuvables
 
 ## Prérequis
 
