@@ -6,7 +6,7 @@ Ce projet est un site internet personnel comprenant les sections suivantes :
 - Un portfolio
 - Un formulaire de contact
 
-J'ai conçu ce site dans le cadre d'un TP pour apprendre à versionner avec Git, déployer un site sur GitHub Pages et appliquer des techniques avancées telles que la réécriture d'URL ou encore la gestion des erreurs (pour Apache).
+J'ai conçu ce site dans le cadre d'un TP pour apprendre à versionner avec Git, déployer un site sur GitHub Pages et appliquer des techniques avancées telles que la réécriture d'URL ou encore la gestion des erreurs (sur serveur sco APACHE).
 
 ## Fonctionnalités principales
 
