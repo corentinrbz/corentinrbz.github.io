@@ -118,6 +118,19 @@
     background-color:#20202A;
 }
 
+/* Contenu */
+.section-contenu-404 {
+    margin-top: -35px;
+    padding: 60px ;
+    background-color:#20202A;
+}
+
+.titre-contenu-404 {
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+}
+
 .titre-contenu {
     margin-top: -70px;
     margin-bottom: 80px;
