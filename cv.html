@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corentin Ribezzo</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <header class="entete">
+        <div class="conteneur">
+            <nav class="navigation">
+                <ul class="liens">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-contenu-cv">
+        <div class="grp-titre-cv">
+            <img class="photo-cv"  src="./images/IMG_0434.png" alt="Photo de Corentin Ribezzo">
+            <div class="titre-contenu-cv">
+                <p>Qui suis-je ?</p>
+                <p class="description-titre-cv"> Je m'appelle Corentin Ribezzo <br>et je suis étudiant en Licence Professionnelle <br>Webdesign et Communication Visuelle</p>
+            </div>
+        </div>
+        
+        <div class="articles-flex-cv">
+            <h3 class="nom-article-cv">Contactez-moi via </h3>
+            <p class="contact"> Mail : corentinjpribezzo@gmail.com <br>
+                Tél. : 06 62 35 15 06 <br>
+                Site internet : www.corentinribezzo.com
+            </p>
+        </div> <br>
+
+        <div class="articles-flex-cv">
+            <h3 class="nom-article-cv">Mon parcours professionnel </h3>
+            <div class="experience">
+                <h3>Stagiaire observateur</h3>
+                <p><strong>Brigade des Sapeurs Pompiers de Paris (94)</strong> - 2018</p>
+                <h4> A l’occasion de cette première expérience dans le
+                    monde professionnel et accessoirement militaire, j’ai
+                    pu découvrir l’importance d’une bonne infrastructure
+                    réseaux et de ses enjeux en terme de confidentialité.
+                     </h4> <br> <hr> <br>
+                     <h3>Stagiaire assistant</h3>
+                     <p><strong>Ministère de l'Interieur (33)</strong> - 2023</p>
+                     <h4> Du matériel plus complexe ainsi que des
+                         équipements plus diversifiés m’ont permis de
+                         pratiquer et d’étudier la façon dont le réseau Internet
+                         parvient à naviguer entre chaque infrastructure.                    
+                    </h4>                
+            </div>
+        </div> <br>
+
+        <div class="articles-flex-cv">
+            <h3 class="nom-article-cv">Mon parcours scolaire </h3>
+            <div class="experience">
+                <h3>Licence professionelle Métiers du Numérique : Conception, Rédaction et Réalisation Web</h3>
+                <p><strong>Ecole d'ingénieurs en Sciences Industrielles et Numérique (08)</strong> - 2024 à aujourd’hui</p>
+                <h4> Grâce aux travaux pratiques et divers outils de création numérique mis à disposition, je développe des compétences en developpement web et en communication visuelle.
+                     </h4>
+                     <p> <strong>Compétences visées</strong></p>
+                     <ul id="liste">
+                        <li class="base">HTML/CSS/SASS</li>
+                        <li class="base">JavaScript</li>
+                        <li class="base">Suite Adobe</li>
+                        <li class="base">Suite Affinity</li>
+                        <li class="base">Figma</li>
+                        <li class="base">WordPress</li>
+                        <li class="base">Elementor</li>
+                    </ul>
+                     <br>
+                    <div class="flex-bouton-competences">
+                        <button id="bouton-nouvelle-competence" class="bouton-action" >Nouvelle compétence</button>
+                    </div>
+                    
+                    <form id="formulaire-ajout" style="display: none">
+                        <div class="flex-saisie-competences">
+                            <label style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 20px;" >Nouvelle compétence :</label>
+                            <input type="text" id="nouvelle-competence" required>
+                        </div><br>
+
+                        <div class="flex-saisie-competences">
+                            <label style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">Description (facultatif) :</label>
+                            <input type="text" id="description-competence">
+                        </div><br>
+                        
+                        <div class="flex-saisie-competences">
+                            <label style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">Niveau :</label>
+                            <select id="niveau-competence" required>
+                                <option value="Débutant">Débutant</option>
+                                <option value="Intermédiaire">Intermédiaire</option>
+                                <option value="Avancé">Avancé</option>
+                            </select>
+                        </div>
+                        <br>
+                        
+                        <button type="submit" class="bouton-action">Enregistrer les modifications</button>
+                    </form>
+                    <script src="./scripts/scripts.js"></script>
+                     <br> <hr> <br>
+                     <h3>Brevet de Technicien Supérieur en Systèmes Numériques, Informatique et Réseaux</h3>
+                     <p><strong>Lycée polyvalent Vauban (29)</strong> - 2022-2024</p>
+                     <h4> Du matériel plus complexe ainsi que des
+                         équipements plus diversifiés m’ont permis de
+                         pratiquer et d’étudier la façon dont le réseau Internet
+                         parvient à naviguer entre chaque infrastructure.                    
+                    </h4>   
+                    <ul id="liste">
+                        <li class="base">Langage C</li>
+                        <li class="base">Langage C++</li>
+                        <li class="base">SQL</li>
+                        <li class="base">Réseaux</li>
+                        <li class="base">Interface utilisateur (GUI)</li>
+                    </ul>         
+            </div>
+        </div>
+        <br>
+
+        <div class="articles-flex-cv">
+            <h3 class="nom-article-cv">Mes passions </h3>
+            <div class="experience">
+                     <p> <strong>Quelques passions dont je ne pourrai me détacher</strong></p>
+                     <ul id="liste">
+                        <li class="base">Photographie</li>
+                        <li class="base">Skateboard</li>
+                        <li class="base">Musique</li>
+                        <li class="base">Jeux vidéo</li>
+                        <li class="base">Course à pied</li>
+                        <li class="base">Badminton</li>
+                        <li class="base">Comédie</li>
+                        <li class="base">graphisme</li>
+                     </ul>         
+            </div>
+        </div>
+    </section>
+
+    <section class="section-contenu2">
+        <header class="titre-contenu2">
+            <p>La suite est plus concrète</p>
+        </header>
+        <div class="articles-flex2">
+            <article class="article2">
+                <a href="portfolio.html" class="bouton-decouvrir4">Voir mon portfolio</a>
+            </article>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p class="copyright">&copy; 2025 Corentin Ribezzo. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
