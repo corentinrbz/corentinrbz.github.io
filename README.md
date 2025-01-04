@@ -1,16 +1,31 @@
-## Hi there 👋
+# Projet CV - Portfolio
 
-<!--
-**corentinrbz/corentinrbz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Ce projet est un site internet personnel comprenant les sections suivantes :
+- Une page d'accueil
+- Un CV
+- Un portfolio
+- Un formulaire de contact
 
-Here are some ideas to get you started:
+Il a été conçu dans le cadre d'un TP noté pour apprendre à versionner avec Git, déployer un site sur GitHub Pages, et appliquer des techniques avancées comme la réécriture d'URLs et la gestion des erreurs.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Fonctionnalités principales
+
+1. **Réécriture d'URLs sans extensions** : Les pages sont accessibles via des chemins simplifiés
+2. **Formulaire de contact fonctionnel** : Une interface pour envoyer des messages
+3. **Portfolio interactif** : Présentation de projets avec des vignettes cliquables
+4. **Page d'erreur personnalisée (404)** : Une page dédiée pour les liens cassés ou introuvables
+
+## Prérequis
+
+Pour visualiser ou modifier ce projet en local, vous aurez besoin de :
+- Un éditeur de code (par exemple VS Code)
+- Un navigateur web
+
+## Étapes pour visualiser le site en local
+
+1. Cloner le dépôt avec la commande :
+  `git clone https://github.com/corentinrbz/corentinrbz.github.io.git`
+2. Ouvrir le fichier index.html dans votre navigateur pour explorer le site.
+
+
+
