@@ -84,8 +84,10 @@
 
         /* Page content */
             .content {
+                display: flex;
                 padding: 5rem 2rem;
-                text-align: center;
+                align-items: center;
+                justify-content: center;
                 background-color: #D0D0CE;
             }
 
@@ -128,6 +130,11 @@
 
             }
 
+            .flex-button i {
+                transition: transform 0.2s ease-out; /* Transition fluide pour l'effet */
+            }
+
+
             .content-flex1-2 i {
 
                 align-items: center;
@@ -141,7 +148,7 @@
             }
 
             .content h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
                 color: #20202A;
                 text-align: left;
 
@@ -155,23 +162,24 @@
 
 
             .content2 {
-                padding: 8rem 2rem;
-                text-align: center;
+                display: flex;
+                padding: 5rem 2rem;
+                align-items: center;
+                justify-content: center;
                 background-color: #20202A;
+                position: relative;
+                overflow: hidden; /* Pour éviter que le texte dépasse */
             }
 
-            .content2 h1 {
-                font-size: 5rem;
-                color: white;
-                text-align: left;
 
-            }
+            
 
-            .content2 p {
-                font-size: 1.8rem;
-                font-family: Arial, Helvetica, sans-serif;
+            .content-flex2 p {
+                font-size: 1rem;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 color: white;
                 text-align: justify;
+            
             }
 
             .content2 button {
@@ -184,11 +192,73 @@
             .content-flex2 {
                 display: flex;
                 flex-direction: column;
-                gap: 8rem;
+                gap: 4rem;
                 align-items: center;
                 justify-content: center;
-                padding: 3rem;
-            
+                width: 100%;
+            }
+
+            .typing-container {
+                display: inline-block; /* Pour s'adapter à la taille du texte */
+                font-size: 2.5rem; /* Taille du texte */
+                color: white; /* Couleur du texte */
+                white-space: nowrap; /* Empêche les retours à la ligne */
+                overflow: hidden; /* Masque le texte en dehors de la zone visible */
+                border-right: 2px solid white; /* Curseur clignotant */
+                animation: typing 4s steps(30, end), pause 3s steps(30, end) 4s, erasing 2s steps(30, end) 7s infinite;
+            }
+
+            /* Animation de frappe */
+            @keyframes typing {
+                from {
+                    width: 0; /* Départ : texte masqué */
+                }
+                to {
+                    width: 100%; /* Fin : texte entièrement visible */
+                }
+            }
+
+            @keyframes pause {
+                from, to {
+                    width: 100%; /* Texte visible, le curseur clignote */
+                }
+            }
+
+            @keyframes erasing {
+                from {
+                    width: 100%; /* Texte visible */
+                }
+                to {
+                    width: 0; /* Texte effacé */
+                }
+            }
+
+            /* Animation du curseur clignotant */
+            @keyframes blink-caret {
+                from, to {
+                    border-color: transparent;
+                }
+                50% {
+                    border-color: white;
+                }
+            }
+
+            .typing-container {
+                animation: blink-caret 0.7s step-end infinite;
+            }
+
+            .content-flex2 h1 {
+                font-size: 2.5rem;
+                color: white;
+                text-align: left;
+
+            }
+
+            .content-flex2 p {
+                font-size: 1rem;
+                color: white;
+                text-align: left;
+
             }
 
             .presentation-flex {
@@ -221,6 +291,23 @@
             }
         }
     </style> 
+
+    <script>
+        // Effet de rotation basé sur le scroll
+        window.addEventListener("scroll", function () {
+            const icons = document.querySelectorAll(".flex-button i"); // Sélection des icônes
+
+            icons.forEach((icon) => {
+                const scrollY = window.scrollY; // Récupère la position du scroll
+                const rotation = scrollY / 2; // Calcule la rotation en fonction du scroll
+                icon.style.transform = `rotate(${rotation}deg)`; // Applique la rotation
+            });
+        });
+    </script>
+
+
+
+
 </head>
 <body>
 
@@ -253,9 +340,9 @@
             <p>Des premiers pixels qui m'ont fasciné dès l’enfance aux créations graphiques que je réalise aujourd’hui, ma passion reste la même. <br> <br>
             Transformer l’imaginaire en expériences visuelles uniques où chaque détail raconte une histoire.</p> <br>
             <div class="flex-button">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-linkedin"></i>
+                <a href="..." target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="..." target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="..." target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </div>
@@ -263,8 +350,8 @@
 
 <div class="content2">
     <div class="content-flex2">
-        <h1>Dernières créations</h1>
-        <p>En alliant créativité, spontaneité et originalité, j'ai pu concevoir puis réaliser quelques projets dans un cadre scolaire mais aussi plus personnel.</p>
+        <h1 class="typing-container">Dernières créations</h1>
+        <p> Chaque projet que j’ai réalisé est le reflet d’une rencontre, d’une idée ou d’un moment qui m’a inspiré. Ces créations sont autant de fragments de mon parcours où j’ai cherché à transmettre de l’émotion, du sens et <strong>un peu de moi-même</strong>.</p>
         <div class="presentation-flex">
             <div class="carte">
                 <img src="..." alt="Logotype de Le Studio Numérique">
