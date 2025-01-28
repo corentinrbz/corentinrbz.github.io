@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Moderne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            body {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #D0D0CE;
+            }
+
+        /* Sticky navigation bar */
+            .menu-container {
+                top: 1rem;
+                position: sticky;
+                z-index: 1000;
+                background: #20202A;
+                padding: 1.4rem 1.4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 30px;
+                margin: 0 auto;
+                gap: 1rem;
+                width: 95%;
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+                gap: 4rem;
+            }
+
+            nav a {
+                position: relative;
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                transition: color 0.3s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a i {
+                font-size: 1.5rem;
+                margin-bottom: 5px;
+            }
+
+            /* Underline effect */
+            nav a::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 3px;
+                background: white;
+                border-radius: 10px;
+                transition: width 0.3s ease;
+            }
+
+            nav a:hover::after,
+            nav a.active::after {
+                width: 60%;
+            }
+
+            nav a:hover {
+            color: white;
+            }
+
+            nav a.active {
+                color: white;
+            }
+
+        /* Page content */
+            .content {
+                padding: 5rem 2rem;
+                text-align: center;
+                background-color: #D0D0CE;
+            }
+
+            .content-flex1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 95%;
+                gap: 4rem;
+
+            
+            }
+
+            .content-flex1-1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .photo-profil {
+                border-radius: 100%;
+                border: 10px solid #20202A;
+
+            }
+
+            .content-flex1-2 {
+                display: flex;
+                flex-direction: column;
+                width:100%;
+                gap: 1rem;
+            }
+
+            .content h1 {
+                font-size: 3rem;
+                color: #20202A;
+                text-align: center;
+
+            }
+
+            .content p {
+                font-size: 1.6rem;
+                color: #20202A;
+                text-align: left;
+            }
+
+            .content button {
+                font-size: 1.2rem;
+                margin-top: 1rem;
+                color: #6c757d;
+                text-align: left;
+            }
+
+            .content2 {
+                padding: 8rem 2rem;
+                text-align: center;
+                background-color: #20202A;
+            }
+
+            .content2 h1 {
+                font-size: 5rem;
+                color: white;
+                text-align: left;
+
+            }
+
+            .content2 p {
+                font-size: 1.8rem;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                text-align: justify;
+            }
+
+            .content2 button {
+                font-size: 1.2rem;
+                margin-top: 1rem;
+                color: #6c757d;
+                text-align: left;
+            }
+
+            .content-flex2 {
+                display: flex;
+                flex-direction: column;
+                gap: 8rem;
+                align-items: center;
+                justify-content: center;
+                padding: 3rem;
+            
+            }
+
+            .presentation-flex {
+                display: flex;
+                flex-direction: row;
+                gap: 6rem;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .titre-carte {
+                font-size: 2rem;
+            }
+
+            .carte {
+                display: flex;
+                flex-direction: column;
+                width: 40%;
+                height: auto;
+                padding: 4rem;
+            }
+
+            /* Footer */
+            footer {
+                background: #1f2a44;
+                color: white;
+                text-align: center;
+                padding: 1.5rem;
+                margin-top: 4rem;
+            }
+        }
+    </style> 
+</head>
+<body>
+
+<!-- Sticky Navigation Bar -->
+<div class="menu-container">
+    <nav>
+        <a href="index.html" class="active">
+            <i class="fas fa-home"></i>
+            <span>Accueil</span>
+        </a>
+        <a href="projets.html">
+            <i class="fas fa-folder-open"></i>
+            <span>Projets</span>
+        </a>
+        <a href="contact.html">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+</div>
+
+<!-- Page Content -->
+<div class="content">
+    <div class="content-flex1">
+        <div class="content-flex1-1">
+            <img src="./images/photo_profil_460.png" class="photo-profil" alt="Portrait de Corentin Ribezzo">
+        </div>
+        <div class="content-flex1-2">
+            <h1>Corentin Ribezzo</h1>
+            <p>Des premiers pixels qui m'ont fasciné dès l’enfance aux créations graphiques que je réalise aujourd’hui, ma passion reste la même. <br> <br>
+            Transformer l’imaginaire en expériences visuelles uniques où chaque détail raconte une histoire.</p>
+        </div>
+    </div>
+</div>
+
+<div class="content2">
+    <div class="content-flex2">
+        <h1>Dernières créations</h1>
+        <p>En alliant créativité, spontaneité et originalité, j'ai pu concevoir puis réaliser quelques projets dans un cadre scolaire mais aussi plus personnel.</p>
+        <div class="presentation-flex">
+            <div class="carte">
+                <img src="..." alt="Logotype de Le Studio Numérique">
+                <h3 class="titre-carte"> Le Studio Numérique </h3>
+                <p class="description-carte"> En alliant innovation, design et stratégie, ce studio vise à fournir à ses clients des outils uniques pour développer leur identité visuelle, améliorer leur présence numérique et impliquer davantage leur audience sur le net. </p>
+                <button class="petit-btn"> Voir la suite </button>
+            </div>
+            <div class="carte">
+                <img src="..." alt="Logotype de Le Studio Numérique">
+                <h3 class="titre-carte"> Délices de Burgers </h3>
+                <p class="description-carte"> Réinventer l’art du burger tout en proposant une expérience culinaire à la fois savoureuse et conviviale. Ce restaurant prépare des burgers de qualité, élaborés avec des ingrédients locaux et responsables. </p>
+                <button class="petit-btn"> Voir la suite </button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+    <!-- Highlight Section -->
+        <h2 style="font-size: 2.5rem; color: #1f2a44;">Mes compétences</h2>
+            Je maîtrise le design graphique, le développement web et l'intégration d'animations modernes pour des interfaces engageantes.
+        </p>
+    </section>
+
+    <!-- Project Showcase -->
+    <section style="margin-top: 4rem;">
+        <h2 style="font-size: 2.5rem; color: #1f2a44;">Projets récents</h2>
+        <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;">
+            <div style="background: #ffffff; border-radius: 10px; padding: 1rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 300px;">
+                <h3 style="color: #007bff;">Projet 1</h3>
+                <p style="color: #6c757d;">Une application moderne pour simplifier la gestion des tâches.</p>
+            </div>
+            <div style="background: #ffffff; border-radius: 10px; padding: 1rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 300px;">
+                <h3 style="color: #007bff;">Projet 2</h3>
+                <p style="color: #6c757d;">Un design créatif pour une entreprise en pleine croissance.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2025 - Mon Portfolio | Design moderne et interactif.
+</footer>
+
+</body>
+</html>
