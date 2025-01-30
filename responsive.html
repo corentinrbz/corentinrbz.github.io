@@ -7,8 +7,10 @@
     <title>Portfolio Moderne</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <style>
         @import "tailwindcss";
@@ -161,7 +163,7 @@
             }
 
             .content p {
-                font-size: 1.6rem;
+                font-size: 1.1rem;
                 color: #20202A;
                 text-align: left;
             }
@@ -172,7 +174,7 @@
                 padding: 5rem 2rem;
                 align-items: center;
                 justify-content: center;
-                background-color: #20202A;
+                background-color: #D0D0CE;
                 position: relative;
                 overflow: hidden;
                 /* Pour éviter que le texte dépasse */
@@ -205,162 +207,91 @@
                 width: 100%;
             }
 
-            .typing-container {
-                display: inline-block;
-                /* Pour s'adapter à la taille du texte */
+            .content h1 {
                 font-size: 2.5rem;
-                /* Taille du texte */
-                color: white;
-                /* Couleur du texte */
-                white-space: nowrap;
-                /* Empêche les retours à la ligne */
-                overflow: hidden;
-                /* Masque le texte en dehors de la zone visible */
-                border-right: 2px solid white;
-                /* Curseur clignotant */
-                animation: typing 4s steps(30, end), pause 3s steps(30, end) 4s, erasing 2s steps(30, end) 7s infinite;
+                text-align: left;
+
             }
 
-            /* Animation de frappe */
-            @keyframes typing {
-                from {
-                    width: 0;
-                    /* Départ : texte masqué */
-                }
-
-                to {
-                    width: 100%;
-                    /* Fin : texte entièrement visible */
-                }
-            }
-
-            @keyframes pause {
-
-                from,
-                to {
-                    width: 100%;
-                    /* Texte visible, le curseur clignote */
-                }
-            }
-
-            @keyframes erasing {
-                from {
-                    width: 100%;
-                    /* Texte visible */
-                }
-
-                to {
-                    width: 0;
-                    /* Texte effacé */
-                }
-            }
-
-            /* Animation du curseur clignotant */
-            @keyframes blink-caret {
-
-                from,
-                to {
-                    border-color: transparent;
-                }
-
-                50% {
-                    border-color: white;
-                }
-            }
-
-            .typing-container {
-                animation: blink-caret 0.7s step-end infinite;
-            }
 
             .content-flex2 h1 {
                 font-size: 2.5rem;
-                color: white;
+                color: #20202A;
                 text-align: left;
 
             }
 
             .content-flex2 p {
                 font-size: 1rem;
+                color: #20202A;
+                text-align: left;
+
+            }
+
+            .carousel-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+
+            .carousel-item {
+                width: 100%;
+                height: auto;
+                /* Ajuste la hauteur selon tes besoins */
+            }
+
+            .carousel-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* Remplit complètement sans espace blanc */
+                display: block;
+            }
+
+            .carousel-inner {
+                background-color: red;
+                /* Pour voir si le problème vient de l'image */
+            }
+
+            .content3 {
+                display: flex;
+                padding: 5rem 2rem;
+                align-items: center;
+                justify-content: center;
+                background-color: #20202A;
+                position: relative;
+                overflow: hidden;
+                /* Pour éviter que le texte dépasse */
+            }
+
+            .content-flex3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 95%;
+                gap: 4rem;
+
+
+            }
+
+            .content3 h1 {
+                font-size: 2.5rem;
                 color: white;
                 text-align: left;
 
             }
 
-            /* Style du carrousel */
-            .carousel {
-                display: flex;
-                flex-direction: colurowmn;
-                width: 100%;
-                height: auto;
-                justify-content: center;
-                align-items: center;
-                border-radius: 15px;
-                background-color: #D0D0CE;
-                gap: 0.1rem;
-            }
-
-            /* Conteneur des slides */
-            .carousel-track {
-                display: flex;
-                transition: transform 0.5s ease-in-out;
-                width: auto;
-                height: 100%;
-            }
-
-            .carousel-track img {
-                height: 50%;
-                width: auto;
-            }
-
-            /* Style des images */
-            .carousel-item {
-                width: 100%;
-                height: auto;
-            }
-
-            .bi-arrow-left-circle-fill {
-                height: 4rem;
-                width: auto;
-                align-items: center;
-                justify-content: center;
+            .content3 p {
+                font-size: 1.6rem;
                 color: white;
-                transform: translateY(-50%);
-            }
-
-            .bi-arrow-right-circle-fill {
-                height: 4rem;
-                width: 4rem;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                transform: translateY(-50%);
+                text-align: left;
             }
 
 
 
 
-            /* Indicateurs */
-            .carousel-dots {
-                display: flex;
-                flex-direction: row;
-                text-align: center;
-                justify-content: center;
-            }
 
-            .dot {
-                display: inline-block;
-                width: 10px;
-                height: 10px;
-                margin: 5px;
-                background: gray;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: background 0.3s;
-            }
-
-            .dot.active {
-                background: black;
-            }
 
 
 
@@ -489,15 +420,50 @@
         </div>
     </div>
 
+    <div class="content3">
+        <div class="content-flex3">
+            <div class="row justify-content-center text-center g-5">
+                <div class="col-lg-4 d-flex flex-column align-items-center">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center bg-white text-white mb-4" style="width: 140px; height: 140px; font-size: 50px; background-color: #D0D0CE;">
+                        <i class="fas fa-palette" style="font-size: 5rem; color: #20202A;"></i>
+                    </div>
+                    <h2 class="mb-3 text-start align-self-start" style="font-size: 2rem; color: white !important;">Communication visuelle : l'écho d'une identité.</h2>
+                    <p class="mb-3" style="font-size: 1rem !important; font-family: 'Inter', sans-serif;">Donner une identité forte et impactante à une marque à travers des visuels qui captent l’essence d’un message et marquent les esprits.</p>
+                </div>
+                <div class="col-lg-4 d-flex flex-column align-items-center">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center bg-white text-white mb-4" style="width: 140px; height: 140px; font-size: 50px; background-color: #D0D0CE;">
+                        <i class="fas fa-desktop" style="font-size: 4rem; color: #20202A;"></i>
+                    </div>
+                    <h2 class="mb-3 text-start align-self-start" style="font-size: 2rem; color: white !important;">UI/UX Design : l'art de l'invisible.</h2>
+                    <p class="mb-3" style="font-size: 1rem !important; font-family: 'Inter', sans-serif;">Chaque interface raconte une histoire, chaque interaction doit être fluide, intuitive et presque instinctive car concevoir une expérience, c’est comprendre l’humain avant de penser au digital. </p>
+                </div>
+                <div class="col-lg-4 d-flex flex-column align-items-center">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center bg-white text-white mb-4" style="width: 140px; height: 140px; font-size: 50px; background-color: #D0D0CE;">
+                        <i class="fas fa-code" style="font-size: 4rem; color: #20202A;"></i>
+                    </div>
+                    <h2 class="mb-3 text-start align-self-start" style="font-size: 2rem; color: white !important;">Intégration web : l'architecture du virtuel.</h2>
+                    <p class="mb-3" style="font-size: 1rem !important; font-family: 'Inter', sans-serif;">Intégrer, c’est donner vie à l’immobile et transformer un concept en une expérience fluide. Un site bien conçu ne se remarque pas, il se vit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="content2">
         <div class="content-flex2">
-            <h2 class="typing-container">Dernières créations</h2>
+
+
+
+
+            <h1>Mes dernières créations</h1>
             <p> Chaque projet que j’ai réalisé est le reflet d’une rencontre, d’une idée ou d’un moment qui m’a inspiré.
                 Ces créations sont autant de fragments de mon parcours où j’ai cherché à transmettre de l’émotion, du
                 sens et <strong>un peu de moi-même</strong>.
             </p>
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="background-color: #20202A;">
-                <div class="carousel-inner" style="border-radius: 35px;">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"
+                style="background-color: #20202A;">
+                <div class="carousel-inner" style="border-radius: 35px; background-color: #20202A;">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="./presentation_ddb.svg" alt="Première slide">
                     </div>
@@ -509,7 +475,7 @@
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="color: #20202A;"></span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -521,31 +487,9 @@
         </div>
     </div>
 
+    
 
-    <!-- Highlight Section -->
-    <h2 style="font-size: 2.5rem; color: #1f2a44;">Mes compétences</h2>
-    Je maîtrise le design graphique, le développement web et l'intégration d'animations modernes pour des interfaces
-    engageantes.
-    </p>
-    </section>
-
-    <!-- Project Showcase -->
-    <section style="margin-top: 4rem;">
-        <h2 style="font-size: 2.5rem; color: #1f2a44;">Projets récents</h2>
-        <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;">
-            <div
-                style="background: #ffffff; border-radius: 10px; padding: 1rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 300px;">
-                <h3 style="color: #007bff;">Projet 1</h3>
-                <p style="color: #6c757d;">Une application moderne pour simplifier la gestion des tâches.</p>
-            </div>
-            <div
-                style="background: #ffffff; border-radius: 10px; padding: 1rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 300px;">
-                <h3 style="color: #007bff;">Projet 2</h3>
-                <p style="color: #6c757d;">Un design créatif pour une entreprise en pleine croissance.</p>
-            </div>
-        </div>
-    </section>
-    </div>
+   
 
     <!-- Footer -->
     <footer>
