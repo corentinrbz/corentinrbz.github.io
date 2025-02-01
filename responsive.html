@@ -39,7 +39,7 @@
                 gap: 1rem;
                 width: 95%;
                 border: 2px solid white;
-                /* Ajoute un contour blanc */
+                text-decoration: none;
             }
 
 
@@ -47,6 +47,7 @@
                 display: flex;
                 justify-content: center;
                 gap: 4rem;
+                text-decoration: none;
             }
 
             nav a {
@@ -63,6 +64,7 @@
             nav a i {
                 font-size: 1.5rem;
                 margin-bottom: 5px;
+                text-decoration: none;
             }
 
             /* Underline effect */
@@ -77,6 +79,10 @@
                 background: white;
                 border-radius: 10px;
                 transition: width 0.3s ease;
+            }
+
+            .menu-container span {
+                text-decoration: none;
             }
 
             nav a:hover::after,
@@ -274,11 +280,9 @@
 
             .btn {
                 background-color: #20202A;
-                /* Bleu foncé que tu utilises */
+                text-decoration: none;
                 color: white;
-                /* Texte en blanc */
                 border: none;
-                /* Supprime la bordure */
                 padding: 0.7rem 1.3rem;
                 font-size: 1.5rem;
                 border-radius: 30px;
@@ -320,7 +324,7 @@
     <!-- Sticky Navigation Bar -->
     <div class="menu-container">
         <nav>
-            <a href="index.html" class="active">
+            <a href="responsive.html" class="active">
                 <i class="fas fa-home"></i>
                 <span>Accueil</span>
             </a>
@@ -411,9 +415,10 @@
                 Mon parcours m’a permis d’explorer des domaines variés. Aujourd’hui, cette diversité fait ma force.
                 Polyvalent et rigoureux, je m’adapte à chaque besoin en alliant créativité et expertise technique.
             </blockquote>
-            <button class="btn"> 
+            <a href="projets.html" class="btn">
                 <i class="fas fa-folder-open"></i>&nbsp; Découvrir les projets
-            </button>
+            </a>
+            
             
             
         </div>

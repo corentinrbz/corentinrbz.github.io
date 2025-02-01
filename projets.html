@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Moderne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        @import "tailwindcss";
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            body {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #D0D0CE !important;
+
+            }
+
+            /* Sticky navigation bar */
+            .menu-container {
+                top: 1rem;
+                position: sticky;
+                z-index: 1000;
+                background: #20202A;
+                padding: 1.4rem 1.4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 30px;
+                margin: 0 auto;
+                gap: 1rem;
+                width: 95%;
+                border: 2px solid white;
+                /* Ajoute un contour blanc */
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+                gap: 4rem;
+            }
+
+            nav a {
+                position: relative;
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                transition: color 0.3s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a i {
+                font-size: 1.5rem;
+                margin-bottom: 5px;
+            }
+
+            /* Underline effect */
+            nav a::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 3px;
+                background: white;
+                border-radius: 10px;
+                transition: width 0.3s ease;
+            }
+
+            nav a:hover::after,
+            nav a.active::after {
+                width: 60%;
+            }
+
+            nav a:hover {
+                color: white;
+            }
+
+            nav a.active {
+                color: white;
+            }
+
+            /* Page content */
+            .content {
+                display: flex;
+                padding: 5rem 2rem;
+                align-items: center;
+                justify-content: center;
+                background-color: #D0D0CE;
+            }
+
+
+
+
+
+            .content h1 {
+                font-size: 2.5rem;
+                color: #20202A;
+                text-align: left;
+
+            }
+
+            .content p {
+                font-size: 1.1rem;
+                color: #20202A;
+                text-align: left;
+            }
+
+
+
+
+            .swiper-pagination-bullet {
+                background-color: white !important;
+                /* Tous les bullets en blanc */
+                opacity: 0.6;
+                /* Rend les bullets légèrement transparents */
+            }
+
+            .swiper-pagination-bullet-active {
+                background-color: white !important;
+                /* Bullet actif en blanc */
+                opacity: 1;
+                /* Rétablit l'opacité du bullet actif */
+            }
+
+            .content3 {
+                display: flex;
+                padding: 5rem 2rem;
+                background-color: #20202A;
+                gap: 2rem;
+            }
+
+
+            .content-flex3 {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .presentation-projet {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 2rem;
+                width: 100%;
+                height: auto;
+                gap: 0.5rem;
+            }
+
+            .titre-projet {
+                color: white;
+                padding: 1rem;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                text-align: center;
+            }
+
+            .proj {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                height: auto;
+            }
+
+
+            .desc-projet {
+                color: white;
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            .desc-titre {
+                color: white;
+                font-size: 1.5rem;
+                text-align: left;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+            }
+
+            .flex-comp {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                width: 100%;
+                height: auto;
+                justify-content: left;
+                align-items: center;
+            }
+
+            .comp {
+                display: flex;
+                color: white;
+                background-color: #20202A;
+                border-radius: 35px;
+                padding: 0.3rem 0.5rem;
+                border: white solid;
+                justify-content: center;
+                align-items: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+
+            .content2 {
+                display: flex;
+                padding: 2rem 2rem;
+                align-items: center;
+                justify-content: center;
+                background-color: #D0D0CE;
+                position: relative;
+                overflow: hidden;
+                /* Pour éviter que le texte dépasse */
+            }
+
+
+
+
+            .content-flex2 p {
+                font-size: 1rem;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                text-align: justify;
+
+            }
+
+            .content-flex2 {
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .btn2 {
+                display: inline-flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: center !important;
+                background-color: #20202A !important;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color: white !important;
+                border: none !important;
+                padding: 0.7rem 1.3rem !important;
+                font-size: 1.5rem !important;
+                border-radius: 30px !important;
+                transition: background 0.3s ease !important;
+                gap: 1rem !important;
+            }
+
+            .btn2:hover {
+                background-color: #D0D0CE !important;
+                border: 2px solid #20202A !important;
+                color: #20202A !important;
+            }
+
+
+
+
+            /* Footer */
+            .footer-content {
+                background: #20202A;
+                color: white;
+                text-align: right;
+                padding: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+            }
+
+
+
+
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <div class="menu-container">
+        <nav>
+            <a href="responsive.html">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="projets.html" class="active">
+                <i class="fas fa-folder-open"></i>
+                <span>Projets</span>
+            </a>
+            <a href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </nav>
+    </div>
+    <h2 class="mb-3 text-start align-self-start"
+    style="font-size: 2rem; color: #20202A !important; background-color: #D0D0CE; padding: 5rem 2rem; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+    Plus concret encore, des projets auxquels j'ai participé et dont j'ai été co-auteur. </h2>
+    
+    <!-- Page Content -->
+    <div class="content3" style="display: flex; flex-direction: column;">
+        <div class="presentation-projet">
+            <h1 class="titre-projet"> Association de la Cidrerie de la Baleine</h1>
+        </div>
+        <!-- Importation de SwiperJS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Carrousel Swiper -->
+        <div class="swiper w-full max-w-3xl mx-auto bg-[#20202A] py-4" style="border-radius: 35px;">
+            <div class="swiper-wrapper h-[400px]">
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
+                    <i class="fas fa-shopping-bag text-white text-6xl"></i>
+                    <h3 class="text-white text-lg font-semibold mt-4">Gestion des récoltes</h3> <br>
+                </div>
+
+                <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
+                    <i class="fas fa-wine-bottle text-white text-6xl"></i>
+                    <h3 class="text-white text-lg font-semibold mt-4">Suivi du remplissage</h3> <br>
+                </div>
+
+                <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
+                    <i class="fas fa-thermometer-half text-white text-6xl"></i>
+                    <h3 class="text-white text-lg font-semibold mt-4">Suivi de la pasteurisation</h3> <br>
+                </div>
+
+                <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
+                    <i class="fas fa-chart-line text-white text-6xl"></i>
+                    <h3 class="text-white text-lg font-semibold mt-4">Statistiques de production</h3> <br>
+                </div>
+
+                <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
+                    <i class="fas fa-users-cog text-white text-6xl"></i>
+                    <h3 class="text-white text-lg font-semibold mt-4">Gestion des utilisateurs</h3> <br>
+                </div>
+
+                <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
+                    <i class="fas fa-print text-white text-6xl"></i>
+                    <h3 class="text-white text-lg font-semibold mt-4">Impression d'étiquetttes</h3> <br>
+                </div>
+
+            </div>
+
+            <!-- Boutons de navigation -->
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+
+            <!-- Indicateurs (pagination) -->
+            <div class="swiper-pagination" style="color: white !important;"></div>
+        </div>
+        <div class="proj">
+            <h3 class="desc-titre">Améliorations apportées</h3>
+            <p class="desc-projet"> En somme, nous avons pu developper un
+                système dont l'automatsation des tâches à permis une nette amélioration
+                des conditions de travail des bénévoles ainsi que du rendement de la production
+                de jus de pommes de cette association.</p> <br>
+            <h3 class="desc-titre">Compétences-clés</h3>
+            <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
+            <div class="marquee">
+                <div class="track">
+                    <span>Langage C</span>
+                    <span>Toolkit XForms</span>
+                    <span>Base de données</span>
+                    <span>SQL</span>
+                    <span>Compilation modulaire</span>
+                    <span>Programmation client</span>
+                    <!-- DUPLICATION pour boucle infinie fluide -->
+                    <span>Langage C</span>
+                    <span>Toolkit XForms</span>
+                    <span>Base de données</span>
+                    <span>SQL</span>
+                    <span>Compilation modulaire</span>
+                    <span>Programmation client</span>
+                </div>
+            </div>
+            <style>
+                .btn {
+                    display: inline-flex !important;
+                    flex-direction: row !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    background-color: white !important;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    color: #20202A !important;
+                    border: none !important;
+                    padding: 0.7rem 1.3rem !important;
+                    font-size: 1.5rem !important;
+                    border-radius: 30px !important;
+                    transition: background 0.3s ease !important;
+                    gap: 1rem !important;
+                    width: auto !important;
+                    height: 100% !important;
+                }
+
+                .btn:hover {
+                    background-color: #20202A !important;
+                    border: 2px solid white !important;
+                    color: white !important;
+                }
+            </style>
+            <a href="..." class="btn">
+                <i class="fas fa-window-maximize"></i>&nbsp; Voir les maquettes
+            </a>
+
+            <style>
+                /* Conteneur principal */
+                .marquee {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    background-color: #20202A;
+                    padding: 10px;
+                    color: white;
+                    font-size: 1.2rem;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    display: inline-block;
+                    align-items: center;
+                    width: 100%;
+                }
+
+                /* Correction pour un défilement fluide */
+                .track {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    gap: 1rem;
+                    animation: marquee 30s linear infinite;
+                    min-width: 200%;
+                }
+
+                /* Style des éléments */
+                .track span {
+                    padding: 0.3rem 0.5rem;
+                    border-radius: 35px;
+                    border: 3px solid white;
+                    white-space: nowrap;
+                }
+
+                /* Animation du défilement */
+                @keyframes marquee {
+                    from {
+                        transform: translateX(0);
+                    }
+
+                    to {
+                        transform: translateX(-50%);
+                    }
+
+                    /* Défilement infini parfait */
+                }
+            </style>
+
+
+
+            <!-- Importation de jQuery et Marquee.js si ce n'est pas déjà fait -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
+
+            <script>
+                $(".marquee").marquee({
+                    duration: 10000,
+                    gap: 50,
+                    delayBeforeStart: 0,
+                    direction: "left",
+                    duplicated: true
+                });
+            </script>
+
+
+
+
+        </div>
+
+        <script>
+            const swiper = new Swiper('.swiper', {
+                loop: true, // Défilement infini
+                autoplay: {
+                    delay: 3000, // Change toutes les 3 secondes
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        </script>
+    </div>
+
+
+
+    <div class="content2">
+        <div class="content-flex3">
+            <h3 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 2rem;"> Une
+                question sur mes projets ou envie d'entrer en contact ?</h3>
+            <button class="btn2">
+                <i class="fas fa-clipboard-list"></i>&nbsp; Me contacter
+            </button>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <span style="font-size: 1rem;">© 2025 Corentin Ribezzo</span>
+            <img src="./signature.svg" alt="Signature de Corentin Ribezzo" style="width: 20%;">
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
