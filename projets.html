@@ -17,14 +17,13 @@
         /* Responsive styles */
         @media screen and (max-width: 768px) {
             body {
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
                 margin: 0;
                 padding: 0;
                 background-color: #D0D0CE !important;
 
             }
 
-            /* Sticky navigation bar */
             .menu-container {
                 top: 1rem;
                 position: sticky;
@@ -40,7 +39,6 @@
                 gap: 1rem;
                 width: 95%;
                 border: 2px solid white;
-                /* Ajoute un contour blanc */
             }
 
             nav {
@@ -65,7 +63,6 @@
                 margin-bottom: 5px;
             }
 
-            /* Underline effect */
             nav a::after {
                 content: '';
                 position: absolute;
@@ -92,7 +89,6 @@
                 color: white;
             }
 
-            /* Page content */
             .content {
                 display: flex;
                 padding: 5rem 2rem;
@@ -100,10 +96,6 @@
                 justify-content: center;
                 background-color: #D0D0CE;
             }
-
-
-
-
 
             .content h1 {
                 font-size: 2.5rem;
@@ -117,9 +109,6 @@
                 color: #20202A;
                 text-align: left;
             }
-
-
-
 
             .swiper-pagination-bullet {
                 background-color: white !important;
@@ -174,7 +163,6 @@
                 height: auto;
             }
 
-
             .desc-projet {
                 color: white;
                 font-family: 'Inter', sans-serif;
@@ -218,20 +206,15 @@
                 align-items: center;
                 justify-content: center;
                 background-color: #D0D0CE;
-                position: relative;
-                overflow: hidden;
-                /* Pour éviter que le texte dépasse */
+                width: 100%;
+                height: auto;
             }
-
-
-
 
             .content-flex2 p {
                 font-size: 1rem;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 color: white;
                 text-align: justify;
-
             }
 
             .content-flex2 {
@@ -241,29 +224,57 @@
                 align-items: center;
                 justify-content: center;
                 width: 100%;
+                height: auto;
+
             }
 
-            .btn2 {
-                display: inline-flex !important;
-                flex-direction: row !important;
-                align-items: center !important;
-                justify-content: center !important;
-                background-color: #20202A !important;
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                color: white !important;
-                border: none !important;
-                padding: 0.7rem 1.3rem !important;
-                font-size: 1.5rem !important;
-                border-radius: 30px !important;
-                transition: background 0.3s ease !important;
-                gap: 1rem !important;
+            .btn-custom {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.7rem 1.3rem;
+                font-size: 1.5rem;
+                font-family: 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                border-radius: 30px;
+                text-decoration: none;
+                cursor: pointer;
+                transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+                white-space: nowrap;
+                width: auto;
             }
 
-            .btn2:hover {
-                background-color: #D0D0CE !important;
-                border: 2px solid #20202A !important;
-                color: #20202A !important;
+            .btn-light {
+                background-color: white;
+                color: #20202A;
+                border: 2px solid transparent;
             }
+
+            .btn-light:hover {
+                background-color: #20202A;
+                color: white;
+                border: 2px solid white;
+            }
+
+            .btn-dark {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: #20202A;
+                color: white;
+                border: none;
+                width: 100%;
+                height: auto;
+            }
+
+            .btn-dark:hover {
+                background-color: #D0D0CE;
+                color: #20202A;
+                border: 2px solid #20202A;
+            }
+
+
+
 
 
 
@@ -315,9 +326,9 @@
         </nav>
     </div>
     <h2 class="mb-3 text-start align-self-start"
-    style="font-size: 2rem; color: #20202A !important; background-color: #D0D0CE; padding: 5rem 2rem; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
-    Plus concret encore, des projets auxquels j'ai participé et dont j'ai été co-auteur. </h2>
-    
+        style="font-size: 2rem; color: #20202A !important; background-color: #D0D0CE; padding: 5rem 2rem; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+        Plus concret encore, des projets auxquels j'ai participé et dont j'ai été co-auteur. </h2>
+
     <!-- Page Content -->
     <div class="content3" style="display: flex; flex-direction: column;">
         <div class="presentation-projet">
@@ -334,32 +345,38 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
                     <i class="fas fa-shopping-bag text-white text-6xl"></i>
-                    <h3 class="text-white text-lg font-semibold mt-4">Gestion des récoltes</h3> <br>
+                    <h3 class="text-white text-lg font-semibold mt-4" style="font-family: 'Inter', sans-serif;">Gestion
+                        des récoltes</h3> <br>
                 </div>
 
                 <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
                     <i class="fas fa-wine-bottle text-white text-6xl"></i>
-                    <h3 class="text-white text-lg font-semibold mt-4">Suivi du remplissage</h3> <br>
+                    <h3 class="text-white text-lg font-semibold mt-4" style="font-family: 'Inter', sans-serif;">Suivi du
+                        remplissage</h3> <br>
                 </div>
 
                 <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
                     <i class="fas fa-thermometer-half text-white text-6xl"></i>
-                    <h3 class="text-white text-lg font-semibold mt-4">Suivi de la pasteurisation</h3> <br>
+                    <h3 class="text-white text-lg font-semibold mt-4" style="font-family: 'Inter', sans-serif;">Suivi de
+                        la pasteurisation</h3> <br>
                 </div>
 
                 <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
                     <i class="fas fa-chart-line text-white text-6xl"></i>
-                    <h3 class="text-white text-lg font-semibold mt-4">Statistiques de production</h3> <br>
+                    <h3 class="text-white text-lg font-semibold mt-4" style="font-family: 'Inter', sans-serif;">
+                        Statistiques de production</h3> <br>
                 </div>
 
                 <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
                     <i class="fas fa-users-cog text-white text-6xl"></i>
-                    <h3 class="text-white text-lg font-semibold mt-4">Gestion des utilisateurs</h3> <br>
+                    <h3 class="text-white text-lg font-semibold mt-4" style="font-family: 'Inter', sans-serif;">Gestion
+                        des utilisateurs</h3> <br>
                 </div>
 
                 <div class="swiper-slide flex flex-col items-center justify-center h-full rounded-lg text-center">
                     <i class="fas fa-print text-white text-6xl"></i>
-                    <h3 class="text-white text-lg font-semibold mt-4">Impression d'étiquetttes</h3> <br>
+                    <h3 class="text-white text-lg font-semibold mt-4" style="font-family: 'Inter', sans-serif;">
+                        Impression d'étiquettes</h3> <br>
                 </div>
 
             </div>
@@ -386,42 +403,17 @@
                     <span>Base de données</span>
                     <span>SQL</span>
                     <span>Compilation modulaire</span>
-                    <span>Programmation client</span>
+                    <span>Programmation sur client lourd</span>
                     <!-- DUPLICATION pour boucle infinie fluide -->
                     <span>Langage C</span>
                     <span>Toolkit XForms</span>
                     <span>Base de données</span>
                     <span>SQL</span>
                     <span>Compilation modulaire</span>
-                    <span>Programmation client</span>
+                    <span>Programmation sur client lourd</span>
                 </div>
             </div>
-            <style>
-                .btn {
-                    display: inline-flex !important;
-                    flex-direction: row !important;
-                    align-items: center !important;
-                    justify-content: center !important;
-                    background-color: white !important;
-                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                    color: #20202A !important;
-                    border: none !important;
-                    padding: 0.7rem 1.3rem !important;
-                    font-size: 1.5rem !important;
-                    border-radius: 30px !important;
-                    transition: background 0.3s ease !important;
-                    gap: 1rem !important;
-                    width: auto !important;
-                    height: 100% !important;
-                }
-
-                .btn:hover {
-                    background-color: #20202A !important;
-                    border: 2px solid white !important;
-                    color: white !important;
-                }
-            </style>
-            <a href="..." class="btn">
+            <a href="..." class="btn-custom btn-light">
                 <i class="fas fa-window-maximize"></i>&nbsp; Voir les maquettes
             </a>
 
@@ -517,7 +509,7 @@
         <div class="content-flex3">
             <h3 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 2rem;"> Une
                 question sur mes projets ou envie d'entrer en contact ?</h3>
-            <button class="btn2">
+            <button class="btn-custom btn-dark">
                 <i class="fas fa-clipboard-list"></i>&nbsp; Me contacter
             </button>
 
