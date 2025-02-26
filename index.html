@@ -332,20 +332,18 @@
     }
   </style>
   <script>
-    const scrollBtn = document.getElementById("scrollTopBtn");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        scrollBtn.classList.add("show");
-      } else {
-        scrollBtn.classList.remove("show");
-      }
-    });
-
-    scrollBtn.addEventListener("click", (e) => {
+    document.getElementById("scrollTopBtn").addEventListener("click", function (e) {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      let scrollInterval = setInterval(() => {
+        if (window.scrollY > 0) {
+          window.scrollBy(0, -150);
+        } else {
+          clearInterval(scrollInterval);
+        }
+      }, 10);
     });
+
   </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
