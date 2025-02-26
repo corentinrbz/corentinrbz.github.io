@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Corentin Ribezzo</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -22,6 +22,11 @@
         padding: 0;
         background: #D0D0CE;
       }
+
+      a {
+        text-decoration: none !important;
+      }
+
 
       /* Sticky navigation bar */
       .menu-container {
@@ -63,10 +68,15 @@
         color: white;
         text-decoration: none;
         font-size: 1rem;
-        transition: color 0.3s;
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+
+      nav a:hover,
+      nav a:focus {
+        color: white !important;
+        text-decoration: none;
       }
 
       nav a i {
@@ -273,7 +283,7 @@
         font-size: 2rem;
         cursor: pointer;
         transition: opacity 0.3s, transform 0.3s;
-        border: 2px solid #20202A;
+        border: 5px solid #20202A;
         text-decoration: none;
       }
 
@@ -301,11 +311,11 @@
       .btn {
         background-color: #20202A;
         color: white;
-        border: solid 3px;
+        border: #20202A solid 3px;
         border-radius: 35px;
         width: 100%;
         height: 100%;
-        font-size: 1rem;
+        font-size: 1.3rem;
         padding: 0.8rem;
       }
 
@@ -316,6 +326,8 @@
         border-radius: 35px;
 
       }
+
+
 
     }
   </style>
@@ -335,9 +347,6 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -348,13 +357,13 @@
   <div class="menu-container">
     <nav>
       <a href="#">
-        <i class="fa-solid fa-user"></i>
+        <i class="fas fa-user-circle"></i>
       </a>
-      <a href="#reseaux">
-        <i class="fas fa-share-nodes"></i>
+      <a href="#domaines">
+        <i class="fa-solid fa-flag"></i>
       </a>
-      <a href="projets.html">
-        <i class="fas fa-lightbulb"></i>
+      <a href="#telecharger">
+        <i class="fa-solid fa-file-arrow-down"></i>
       </a>
     </nav>
     <div class="progress-bar"></div>
@@ -391,7 +400,7 @@
       function smoothScrollToTop() {
         const scrollInterval = setInterval(() => {
           if (window.scrollY > 0) {
-            window.scrollBy(0, -50); // Défilement par petits pas vers le haut
+            window.scrollBy(0, -50);
           } else {
             clearInterval(scrollInterval);
           }
@@ -401,7 +410,6 @@
 
   </script>
 
-  <!-- Page Content -->
   <div class="content">
     <div class="content-flex1">
       <div class="content-flex1-1">
@@ -421,7 +429,7 @@
       </div>
     </div>
   </div>
-  <div class="content3">
+  <div class="content3" id="domaines">
     <div class="content-flex3">
       <h3 class="desc-titre">Mes domaines</h3>
       <div class="row justify-content-center text-center g-5">
@@ -480,18 +488,17 @@
       </div>
     </div>
   </div>
-  <a href="#" id="scrollTopBtn" class="scroll-top">
-    <i class="fas fa-arrow-up"></i>
-  </a>
-  <div class="content32">
+
+  <div class="content32" id="telecharger">
     <div class="content-flex32">
       <h3 class="desc-titre2">Ne passez pas à coté d'un talent <span>qui fera la différence</span></h3>
       <p class="mb-3 text-start align-self-start"
-            style="font-size: 1rem !important; font-weight: bold; font-family: 'Inter', sans-serif;  color: #20202A !important;">
-            Mon expérience, mes compétences et ma vision à portée de clic.</p>
-      <a href="projets.html" class="btn">
-        <i class="fas fa-download"></i>&nbsp; Téléchargez mon CV maintenant
-      </a>
+        style="font-size: 1.5rem !important; font-weight: bold; font-family: 'Inter', sans-serif;  color: #20202A !important;">
+        <i class="fa-solid fa-check-square"></i>&nbsp; Mon expérience <br>
+        <i class="fa-solid fa-check-square"></i>&nbsp; Mes compétences <br>
+        <i class="fa-solid fa-check-square"></i>&nbsp; Ma vision
+      </p>
+      <a href="projets.html" class="btn">Téléchargez mon CV maintenant </a>
 
     </div>
   </div>
@@ -505,6 +512,9 @@
       <span style="font-size: 1rem;">© 2025 Corentin Ribezzo</span>
     </div>
   </footer>
+  <a href="#" id="scrollTopBtn" class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
 
 </body>
