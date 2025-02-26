@@ -342,6 +342,8 @@
       }
 
       .popup-box {
+        display: flex;
+        flex-direction: column;
         background: white;
         color: #20202A;
         padding: 2rem;
@@ -350,17 +352,18 @@
         width: 80%;
         max-width: 400px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        gap: 1.2rem;
       }
 
       .popup-box h2 {
         font-size: 1.5rem;
-        margin-bottom: 1rem;
+
       }
 
       .popup-buttons {
         display: flex;
-        justify-content: space-between;
-        margin-top: 1rem;
+        justify-content: center;
+
       }
 
       .popup-btn {
@@ -565,8 +568,10 @@
   </script>
   <div id="popup" class="popup-container">
     <div class="popup-box">
-      <h2>⚠️ Vous allez quitter la page</h2>
-      <p>Ce lien vous redirigera vers un site externe. Voulez-vous continuer ?</p>
+      <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+        <h2>Vous allez quitter la page</h2>
+        <p>Ce lien va vous rediriger vers un site externe. Voulez-vous continuer ?</p>
+      </div>
       <div class="popup-buttons">
         <button id="cancelPopup" class="popup-btn">Annuler</button>
         <button id="confirmPopup" class="popup-btn">Continuer</button>
