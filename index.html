@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corentin Ribezzo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    @import "tailwindcss";
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+      body {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #D0D0CE;
+      }
+
+      /* Sticky navigation bar */
+      .menu-container {
+        border-bottom: 4px solid transparent;
+        position: sticky;
+        z-index: 1000;
+        background: #20202A;
+        padding: 1.4rem 1.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        margin: 0 auto;
+        text-decoration: none;
+        width: 100%;
+      }
+
+      .progress-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background: white;
+        transition: width 0.1s ease-out;
+      }
+
+      nav {
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        text-decoration: none;
+      }
+
+      nav a {
+        position: relative;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a i {
+        font-size: 2rem;
+        text-decoration: none;
+      }
+
+      .content {
+        display: flex;
+        padding: 5rem 2rem;
+        align-items: center;
+        justify-content: center;
+        background-color: #D0D0CE;
+      }
+
+      .content-flex1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        gap: 4rem;
+
+
+      }
+
+      .content-flex1-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .photo-profil {
+        border-radius: 100%;
+        border: 10px solid #20202A;
+
+      }
+
+      .content-flex1-2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+      }
+
+      .flex-button {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-evenly;
+
+
+      }
+
+      .flex-button i {
+        transition: transform 0.2s ease-out;
+        /* Transition fluide pour l'effet */
+      }
+
+
+      .content-flex1-2 i {
+
+        align-items: center;
+        font-size: 2rem;
+        color: white;
+        background-color: #20202A;
+        border-radius: 35%;
+        text-align: center;
+        padding: 1rem;
+        width: auto;
+      }
+
+      .content h1 {
+        font-size: 2.5rem;
+        color: #20202A;
+        text-align: left;
+
+      }
+
+      .content p {
+        font-size: 1.1rem;
+        color: #20202A;
+        text-align: left;
+      }
+
+
+      .content2 {
+        display: flex;
+        padding: 2rem 2rem;
+        align-items: center;
+        justify-content: center;
+        background-color: #D0D0CE;
+        position: relative;
+        overflow: hidden;
+        /* Pour éviter que le texte dépasse */
+      }
+
+
+
+
+      .content-flex2 p {
+        font-size: 1rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        text-align: justify;
+
+      }
+
+      .content-flex2 {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .content h1 {
+        font-size: 2.5rem;
+        text-align: left;
+
+      }
+
+
+      .content-flex2 h1 {
+        font-size: 2.5rem;
+        color: #20202A;
+        text-align: left;
+
+      }
+
+      .content-flex2 p {
+        font-size: 1rem;
+        color: #20202A;
+        text-align: left;
+
+      }
+
+      .content3 {
+        display: flex;
+        padding: 5rem 2rem;
+        align-items: center;
+        justify-content: center;
+        background-color: #20202A;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .content32 {
+        display: flex;
+        padding: 5rem 2rem;
+        align-items: center;
+        justify-content: center;
+        background-color: #D0D0CE;
+        position: relative;
+        overflow: hidden;
+      }
+
+
+      .content-flex3 {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+      }
+
+      .content-flex32 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+      }
+
+
+      /* Footer */
+      .footer-content {
+        background: #20202A;
+        color: white;
+        text-align: right;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      .scroll-top {
+        position: fixed;
+        z-index: 1000;
+        bottom: 50px;
+        right: 30px;
+        width: 70px;
+        height: 70px;
+        background: white;
+        color: #20202A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 35px;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: opacity 0.3s, transform 0.3s;
+        border: 2px solid #20202A;
+      }
+
+      .scroll-top i {
+        color: #20202A;
+      }
+
+      .desc-titre {
+        color: white;
+        font-size: 3rem;
+        text-align: justify;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+      }
+
+      .desc-titre2 {
+        color: #20202A;
+        font-size: 2.5rem;
+        text-align: left;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+      }
+
+      .btn {
+        background-color: #20202A;
+        color: white;
+        border: none;
+        width: auto;
+        height: 100%;
+        font-size: 1.4rem;
+      }
+
+    }
+  </style>
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
+
+    scrollBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Sticky Navigation Bar -->
+  <div class="menu-container">
+    <nav>
+      <a href="#">
+        <i class="fa-solid fa-user"></i>
+      </a>
+      <a href="#reseaux">
+        <i class="fas fa-share-nodes"></i>
+      </a>
+      <a href="projets.html">
+        <i class="fas fa-lightbulb"></i>
+      </a>
+    </nav>
+    <div class="progress-bar"></div>
+
+  </div>
+  <script>
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.scrollY;
+      let docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      let scrollPercent = (scrollTop / docHeight) * 100;
+      document.querySelector(".progress-bar").style.width = scrollPercent + "%";
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollBtn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollBtn.style.opacity = "1";
+          scrollBtn.style.visibility = "visible";
+        } else {
+          scrollBtn.style.opacity = "0";
+          scrollBtn.style.visibility = "hidden";
+        }
+      });
+
+      scrollBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        smoothScrollToTop();
+      });
+
+      function smoothScrollToTop() {
+        const scrollInterval = setInterval(() => {
+          if (window.scrollY > 0) {
+            window.scrollBy(0, -50); // Défilement par petits pas vers le haut
+          } else {
+            clearInterval(scrollInterval);
+          }
+        }, 10);
+      }
+    });
+
+  </script>
+
+  <!-- Page Content -->
+  <div class="content">
+    <div class="content-flex1">
+      <div class="content-flex1-1">
+        <img src="photo_profil_460.png" class="photo-profil" alt="Portrait de Corentin Ribezzo">
+      </div>
+      <div class="content-flex1-2">
+        <h1>Corentin Ribezzo</h1>
+        <p>Des premiers pixels qui m'ont fasciné dès l’enfance aux créations graphiques que je réalise
+          aujourd’hui, ma passion reste la même. <br> <br>
+          Transformer l’imaginaire en expériences visuelles uniques où chaque détail raconte une histoire.</p>
+        <br>
+        <div class="flex-button" id="reseaux">
+          <a href="..." target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="..." target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="..." target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content3">
+    <div class="content-flex3">
+      <h3 class="desc-titre">Mes domaines</h3>
+      <div class="row justify-content-center text-center g-5">
+        <div class="col-lg-4 d-flex flex-column align-items-center">
+          <div class="rounded-circle d-flex align-items-center justify-content-center bg-white text-white mb-4"
+            style="width: 140px; height: 140px; font-size: 50px; background-color: #D0D0CE;">
+            <i class="fas fa-palette" style="font-size: 5rem; color: #20202A;"></i>
+          </div>
+          <h2 class="mb-3 text-start align-self-start" style="font-size: 2rem; color: white !important;">
+            Com' visuelle : l'écho d'une identité</h2>
+          <p class="mb-3 text-start align-self-start"
+            style="font-size: 1rem !important; font-family: 'Inter', sans-serif; color: white !important;">
+            Donner une
+            identité forte et impactante à une marque à travers des visuels qui captent l’essence d’un
+            message et qui marquent les esprits.</p>
+        </div>
+        <div class="col-lg-4 d-flex flex-column align-items-center">
+          <div class="rounded-circle d-flex align-items-center justify-content-center bg-white text-white mb-4"
+            style="width: 140px; height: 140px; font-size: 50px; background-color: #D0D0CE;">
+            <i class="fas fa-bullhorn" style="font-size: 5rem; color: #20202A;"></i>
+          </div>
+          <h2 class="mb-3 text-start align-self-start" style="font-size: 2rem; color: white !important;">
+            Com' digitale : se démarquer sur Internet</h2>
+          <p class="mb-3 text-start align-self-start"
+            style="font-size: 1rem !important; font-family: 'Inter', sans-serif; color: white !important;">
+            Être présent ne suffit plus, il faut être pertinent, engageant et stratégique. Chaque plateforme a son
+            propre langage, ses codes et son public.</p>
+        </div>
+        <div class="col-lg-4 d-flex flex-column align-items-center">
+          <div class="rounded-circle d-flex align-items-center justify-content-center bg-white text-white mb-4"
+            style="width: 140px; height: 140px; font-size: 50px; background-color: #D0D0CE;">
+            <i class="fas fa-desktop" style="font-size: 4rem; color: #20202A;"></i>
+          </div>
+          <h2 class="mb-3 text-start align-self-start" style="font-size: 2rem; color: white !important;">UI/UX
+            Design : l'art de l'invisible</h2>
+          <p class="mb-3 text-start align-self-start"
+            style="font-size: 1rem !important; font-family: 'Inter', sans-serif; color: white !important;">
+            Chaque
+            interface raconte une histoire, chaque interaction doit être fluide, intuitive et presque
+            instinctive car concevoir une expérience, c’est comprendre l’humain avant de penser au digital.
+          </p>
+        </div>
+        <div class="col-lg-4 d-flex flex-column align-items-center">
+          <div class="rounded-circle d-flex align-items-center justify-content-center bg-white text-white mb-4"
+            style="width: 140px; height: 140px; font-size: 50px; background-color: #D0D0CE;">
+            <i class="fas fa-code" style="font-size: 4rem; color: #20202A;"></i>
+          </div>
+          <h2 class="mb-3 text-start align-self-start" style="font-size: 2rem; color: white !important;">
+            Intégration web : l'architecture du virtuel</h2>
+          <p class="mb-3 text-start align-self-start"
+            style="font-size: 1rem !important; font-family: 'Inter', sans-serif;  color: white !important;">
+            Intégrer,
+            c’est donner vie à l’immobile et transformer un concept en une expérience fluide. Un site bien
+            conçu ne se remarque pas, il se vit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" id="scrollTopBtn" class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <div class="content32">
+    <div class="content-flex32">
+      <h3 class="desc-titre2">Ne passez pas à coté d'un talent <span>qui fera la différence</span></h3>
+      <p class="mb-3 text-start align-self-start"
+            style="font-size: 1rem !important; font-weight: bold; font-family: 'Inter', sans-serif;  color: #20202A !important;">
+            Mon expérience, mes compétences et ma vision sont à portée de clic.</p>
+      <a href="projets.html" class="btn">
+        <i class="fas fa-download"></i>&nbsp; Téléchargez mon CV maintenant
+      </a>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <span style="font-size: 1rem;">© 2025 Corentin Ribezzo</span>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
