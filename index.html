@@ -376,37 +376,6 @@
     });
   </script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const scrollBtn = document.getElementById("scrollTopBtn");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          scrollBtn.style.opacity = "1";
-          scrollBtn.style.visibility = "visible";
-        } else {
-          scrollBtn.style.opacity = "0";
-          scrollBtn.style.visibility = "hidden";
-        }
-      });
-
-      scrollBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        smoothScrollToTop();
-      });
-
-      function smoothScrollToTop() {
-        const scrollInterval = setInterval(() => {
-          if (window.scrollY > 0) {
-            window.scrollBy(0, -50);
-          } else {
-            clearInterval(scrollInterval);
-          }
-        }, 10);
-      }
-    });
-
-  </script>
 
   <div class="content">
     <div class="content-flex1">
