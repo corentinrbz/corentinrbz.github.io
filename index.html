@@ -269,7 +269,6 @@
 
       .scroll-top {
         position: fixed;
-        z-index: 1000;
         bottom: 50px;
         right: 30px;
         width: 70px;
@@ -315,7 +314,7 @@
         border-radius: 35px;
         width: 100%;
         height: 100%;
-        font-size: 1.3rem;
+        font-size: 1rem;
         padding: 0.8rem;
       }
 
@@ -326,6 +325,66 @@
         border-radius: 35px;
 
       }
+
+      .popup-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease, visibility 0.3s;
+      }
+
+      .popup-box {
+        background: white;
+        color: #20202A;
+        padding: 2rem;
+        border-radius: 35px;
+        text-align: center;
+        width: 80%;
+        max-width: 400px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .popup-box h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .popup-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+      }
+
+      .popup-btn {
+        background-color: #20202A;
+        color: white;
+        border: #20202A solid 3px;
+        border-radius: 35px;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        flex: 1;
+        margin: 0 0.5rem;
+      }
+
+      .popup-btn:hover {
+        background-color: white;
+        color: #20202A;
+      }
+
+      .show-popup {
+        visibility: visible;
+        opacity: 1;
+      }
+
 
 
 
@@ -389,9 +448,9 @@
           Transformer l’imaginaire en expériences visuelles uniques où chaque détail raconte une histoire.</p>
         <br>
         <div class="flex-button" id="reseaux">
-          <a href="..." target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="..." target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="..." target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/corentin.rbz/" target="_blank" class="reseaux-link"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/corentin_rbz/" target="_blank" class="reseaux-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/corentinrbz/" target="_blank" class="reseaux-link"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
@@ -469,11 +528,6 @@
 
     </div>
   </div>
-
-
-
-
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <span style="font-size: 1rem;">© 2025 Corentin Ribezzo</span>
@@ -482,6 +536,43 @@
   <a href="#" id="scrollTopBtn" class="scroll-top">
     <i class="fas fa-arrow-up"></i>
   </a>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".reseaux-link");
+      const popup = document.getElementById("popup");
+      const cancelBtn = document.getElementById("cancelPopup");
+      const confirmBtn = document.getElementById("confirmPopup");
+      let targetLink = "";
+
+      links.forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          targetLink = this.href;
+          popup.classList.add("show-popup");
+        });
+      });
+
+      cancelBtn.addEventListener("click", function () {
+        popup.classList.remove("show-popup");
+      });
+
+      confirmBtn.addEventListener("click", function () {
+        window.open(targetLink, "_blank");
+        popup.classList.remove("show-popup");
+      });
+    });
+
+  </script>
+  <div id="popup" class="popup-container">
+    <div class="popup-box">
+      <h2>⚠️ Vous allez quitter la page</h2>
+      <p>Ce lien vous redirigera vers un site externe. Voulez-vous continuer ?</p>
+      <div class="popup-buttons">
+        <button id="cancelPopup" class="popup-btn">Annuler</button>
+        <button id="confirmPopup" class="popup-btn">Continuer</button>
+      </div>
+    </div>
+  </div>
 
 
 </body>
